@@ -1,6 +1,6 @@
 package com.iesam.nissansl.domain.models;
 
-public class Motor implements accesorios {
+public class Motor implements Accesorios {
     private String cilindrada;
     private String caballos;
 
@@ -11,6 +11,11 @@ public class Motor implements accesorios {
 
     @Override
     public String getModelo() {
+        return null;
+    }
+
+    @Override
+    public String getUnidades() {
         return null;
     }
 }

@@ -4,7 +4,17 @@ public class Chasis {
     private Integer codigo;
     private String marca;
 
+    private Accesorios accesorios;
+
     private String modelo;
+
+    public Accesorios getAccesorios() {
+        return accesorios;
+    }
+
+    public void setAccesorios(Accesorios accesorios) {
+        this.accesorios = accesorios;
+    }
 
     public Integer getCodigo() {
         return codigo;

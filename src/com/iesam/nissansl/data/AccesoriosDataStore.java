@@ -11,7 +11,7 @@ public class AccesoriosDataStore {
     private Map<Integer, Accesorios> dataStore = new TreeMap<Integer, Accesorios>();
 
     public void guardar(Accesorios accesorios) {
-        dataStore.put(Accesorios.getCodigo(), accesorios);
+        dataStore.put(accesorios.getCod(), accesorios);
     }
 
     public void eliminar(Integer getCod) {
@@ -23,13 +23,8 @@ public class AccesoriosDataStore {
     }
 
     public void modificaraAccesorios (Accesorios accesorios) {
-        dataStore.put(Accesorios.getCodigo(), accesorios);
+        dataStore.put(accesorios.getCod(), accesorios);
     }
 
-    public static AccesoriosDataStore getAccesoriosDataStore() {
-        if (accesoriosDataStore == null) {
-            accesoriosDataStore = new AccesoriosDataStore();
-        }
-        return accesoriosDataStore;
-    }
+
 }

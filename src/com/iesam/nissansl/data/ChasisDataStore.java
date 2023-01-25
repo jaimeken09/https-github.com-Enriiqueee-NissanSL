@@ -27,10 +27,4 @@ public class ChasisDataStore {
         dataStore.put(chasis.getCodigo(), chasis);
     }
 
-    public static ChasisDataStore getChasisDataStore() {
-        if (chasisDataStore == null) {
-            chasisDataStore = new ChasisDataStore();
-        }
-        return chasisDataStore;
-    }
 }

@@ -1,8 +1,9 @@
 package com.iesam.nissansl.data;
 
-import com.iesam.nissansl.domain.models.Accesorios;
 import java.util.Map;
 import java.util.TreeMap;
+import com.iesam.nissansl.domain.models.Accesorios;
+
 
 public class AccesoriosDataStore {
 
@@ -10,7 +11,7 @@ public class AccesoriosDataStore {
 
     private Map<Integer, Accesorios> dataStore = new TreeMap<Integer, Accesorios>();
 
-    public void guardar(Accesorios accesorios) {
+    public void guarda(Accesorios accesorios) {
         dataStore.put(accesorios.getCod(), accesorios);
     }
 
@@ -22,7 +23,7 @@ public class AccesoriosDataStore {
         return dataStore.get(getCod);
     }
 
-    public void modificaraAccesorios (Accesorios accesorios) {
+    public void modificaraccesorios (Accesorios accesorios) {
         dataStore.put(accesorios.getCod(), accesorios);
     }
 

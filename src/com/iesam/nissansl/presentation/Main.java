@@ -1,83 +1,91 @@
 package com.iesam.nissansl.presentation;
 
+import com.iesam.nissansl.data.ChasisDataStore;
 import com.iesam.nissansl.domain.models.Chasis;
 import com.iesam.nissansl.domain.models.Ruedas;
 import com.iesam.nissansl.domain.models.CuadroMando;
 import com.iesam.nissansl.domain.models.Motor;
+import com.iesam.nissansl.domain.usercase.CrearChasis;
 
 public class Main {
     public static void main(String[] args) {
 
-        Ruedas ruedas1 = new Ruedas();
-        ruedas1.setCodRueda(1);
-        ruedas1.setMarca("Michelin");
-        ruedas1.setModelo("Alpin");
-        ruedas1.setDiametro("150");
-        ruedas1.setUnidades("3");
+        Ruedas ruedaA = new Ruedas();
+        ruedaA.setCodRueda(1);
+        ruedaA.setMarca("Michelin");
+        ruedaA.setModelo("Alpin");
+        ruedaA.setDiametro("185");
+        ruedaA.setUnidades("6");
 
-        Ruedas ruedas2 = new Ruedas();
-        ruedas2.setCodRueda(2);
-        ruedas2.setMarca("Firestone");
-        ruedas2.setModelo("Wedex");
-        ruedas2.setDiametro("205");
-        ruedas2.setUnidades("3");
+        Ruedas ruedaB = new Ruedas();
+        ruedaB.setCodRueda(2);
+        ruedaB.setMarca("Firestone");
+        ruedaB.setModelo("WinterHawk");
+        ruedaB.setDiametro("205");
+        ruedaB.setUnidades("3");
 
-        Motor motor1 = new Motor();
-        motor1.setCod(1);
-        motor1.setModelo("X6000");
-        motor1.setCilindrada("2.1");
-        motor1.setCaballos("220");
-        motor1.setUnidades("1");
+        Motor motorA = new Motor();
+        motorA.setCod(1);
+        motorA.setModelo("X6000");
+        motorA.setCilindrada("2.0");
+        motorA.setCaballos("120 cv");
+        motorA.setUnidades("1");
 
-        Motor motor2 = new Motor();
-        motor2.setCod(2);
-        motor2.setModelo("9999");
-        motor2.setCilindrada("2.4");
-        motor2.setCaballos("160 cv");
-        motor2.setUnidades("2");
+        Motor motorB = new Motor();
+        motorB.setCod(2);
+        motorB.setModelo("X900");
+        motorB.setCilindrada("2.4");
+        motorB.setCaballos("160 cv");
+        motorB.setUnidades("2");
 
-        CuadroMando cuadroMando1 = new CuadroMando();
-        cuadroMando1.setCodCuadro(1);
-        cuadroMando1.setModelo("Z32");
-        cuadroMando1.setUnidades("4");
+        CuadroMando cuadroMandoA = new CuadroMando();
+        cuadroMandoA.setCodCuadro(1);
+        cuadroMandoA.setModelo("LM200");
+        cuadroMandoA.setUnidades("4");
 
-        CuadroMando cuadroMando2 = new CuadroMando();
-        cuadroMando2.setCodCuadro(2);
-        cuadroMando2.setModelo("F23");
-        cuadroMando2.setUnidades("1");
+        CuadroMando cuadroMandoB = new CuadroMando();
+        cuadroMandoB.setCodCuadro(2);
+        cuadroMandoB.setModelo("LM600");
+        cuadroMandoB.setUnidades("1");
 
 
         Chasis chasisAAAA = new Chasis();
         chasisAAAA.setCodigo(1000);
         chasisAAAA.setMarca("Porche");
         chasisAAAA.setModelo("Panamera");
-        chasisAAAA.setAccesorios(motor2);
-        chasisAAAA.setAccesorios(ruedas1);
-        chasisAAAA.setAccesorios(cuadroMando1);
+        chasisAAAA.setAccesorios(motorB);
+        chasisAAAA.setAccesorios(ruedaA);
+        chasisAAAA.setAccesorios(cuadroMandoA);
 
         Chasis chasisBBBB = new Chasis();
         chasisBBBB.setCodigo(1001);
         chasisBBBB.setMarca("Renault");
         chasisBBBB.setModelo("Twingo");
-        chasisBBBB.setAccesorios(motor1);
-        chasisBBBB.setAccesorios(ruedas2);
-        chasisBBBB.setAccesorios(cuadroMando2);
+        chasisBBBB.setAccesorios(motorB);
+        chasisBBBB.setAccesorios(ruedaB);
+        chasisBBBB.setAccesorios(cuadroMandoB);
 
         Chasis chasisCCCC = new Chasis();
         chasisCCCC.setCodigo(1002);
         chasisCCCC.setMarca("Mercedes");
         chasisCCCC.setModelo("Clase A");
-        chasisCCCC.setAccesorios(motor1);
-        chasisCCCC.setAccesorios(ruedas2);
-        chasisCCCC.setAccesorios(cuadroMando2);
+        chasisCCCC.setAccesorios(motorA);
+        chasisCCCC.setAccesorios(ruedaA);
+        chasisCCCC.setAccesorios(cuadroMandoA);
 
         Chasis chasisDDDD = new Chasis();
         chasisDDDD.setCodigo(230);
         chasisDDDD.setMarca("Polo");
         chasisDDDD.setModelo("40M");
-        chasisDDDD.setAccesorios(motor1);
-        chasisDDDD.setAccesorios(ruedas1);
-        chasisDDDD.setAccesorios(cuadroMando1);
+        chasisDDDD.setAccesorios(motorA);
+        chasisDDDD.setAccesorios(ruedaA);
+        chasisDDDD.setAccesorios(cuadroMandoB);
+
+        CrearChasis crearChasis = new CrearChasis();
+        crearChasis.execute(chasisAAAA);
+        crearChasis.execute(chasisBBBB);
+        crearChasis.execute(chasisCCCC);
+        crearChasis.execute(chasisDDDD);
 
         ImprimirChasis imprimirChasis = new ImprimirChasis();
         imprimirChasis.imprimir(chasisAAAA );

@@ -15,17 +15,19 @@ public class AccesoriosDataStore {
         dataStore.put(accesorios.getCod(), accesorios);
     }
 
-    public void eliminar(Integer getCod) {
-        dataStore.remove(getCod);
+    public void eliminar(Accesorios accesorios) {
+        dataStore.put(accesorios.getCod(), accesorios);
     }
 
-    public Accesorios buscar(Integer getCod) {
-        return dataStore.get(getCod);
-    }
 
     public void modificaraccesorios (Accesorios accesorios) {
         dataStore.put(accesorios.getCod(), accesorios);
     }
 
-
+    public static AccesoriosDataStore getAccesoriosDataStore() {
+        if (accesoriosDataStore == null) {
+            accesoriosDataStore = new AccesoriosDataStore();
+        }
+        return accesoriosDataStore;
+    }
 }

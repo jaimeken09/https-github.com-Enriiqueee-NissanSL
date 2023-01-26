@@ -15,16 +15,18 @@ public class ChasisDataStore {
         dataStore.put(chasis.getCodigo(), chasis);
     }
 
-    public void eliminar(Integer Codigo) {
-        dataStore.remove(Codigo);
-    }
-
-    public Chasis buscar(Integer CodBastidor) {
-        return dataStore.get(CodBastidor);
+    public void eliminar(Chasis chasis) {
+        dataStore.put(chasis.getCodigo(), chasis);
     }
 
     public void modificar(Chasis chasis) {
         dataStore.put(chasis.getCodigo(), chasis);
     }
 
+    public static ChasisDataStore getChasisDataStore() {
+        if (chasisDataStore == null) {
+            chasisDataStore = new ChasisDataStore();
+        }
+        return chasisDataStore;
+    }
 }

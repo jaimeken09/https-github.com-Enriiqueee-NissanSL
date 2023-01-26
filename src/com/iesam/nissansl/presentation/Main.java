@@ -15,7 +15,7 @@ public class Main {
         ruedaA.setMarca("Michelin");
         ruedaA.setModelo("Alpin");
         ruedaA.setDiametro("185");
-        ruedaA.setUnidades("6");
+        ruedaA.setUnidades("5");
 
         Ruedas ruedaB = new Ruedas();
         ruedaB.setCodRueda(2);
@@ -29,7 +29,7 @@ public class Main {
         motorA.setModelo("X6000");
         motorA.setCilindrada("2.0");
         motorA.setCaballos("120 cv");
-        motorA.setUnidades("1");
+        motorA.setUnidades("2");
 
         Motor motorB = new Motor();
         motorB.setCod(2);
@@ -46,7 +46,7 @@ public class Main {
         CuadroMando cuadroMandoB = new CuadroMando();
         cuadroMandoB.setCodCuadro(2);
         cuadroMandoB.setModelo("LM600");
-        cuadroMandoB.setUnidades("1");
+        cuadroMandoB.setUnidades("2");
 
 
         Chasis chasisAAAA = new Chasis();

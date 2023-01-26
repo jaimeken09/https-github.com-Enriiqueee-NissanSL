@@ -18,7 +18,7 @@ public class Main {
         Ruedas ruedas2 = new Ruedas();
         ruedas2.setCodRueda(2);
         ruedas2.setMarca("Firestone");
-        ruedas2.setModelo("WinterHawk");
+        ruedas2.setModelo("Wedex");
         ruedas2.setDiametro("205");
         ruedas2.setUnidades("3");
 
